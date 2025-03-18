@@ -137,9 +137,11 @@ src/                     # Main source code
 
 ## Setup
 
-Requirements:
-- Python 3.13
-- Your own API keys
+### Requirements
+
+This project was made with Python 3.13.
+
+You will of course need your own API keys.
 
 ### Installation
 
@@ -174,14 +176,14 @@ OPENAI_API_KEY="your-openai-key"
 GEMINI_API_KEY="your-google-key"
 ```
 
-### Running Experiments
+## Running Experiments
 
 Example code to run a math reasoning experiment on a sample of the MATH 500 benchmark can be found in `src/domains/math_reasoning/run_experiment.py`.
 You can run that file as a script to replicate the results present here.
 
 (Currently, the experiment is configured to call Claude 3.5 Haiku with batch processing. Each run with 4-5 prompt components and 50 math problems costs $2-3.)
 
-## Adding New Domains
+### Adding New Domains
 
 Docs to do so coming soon!
 

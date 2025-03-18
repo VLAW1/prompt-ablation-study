@@ -158,18 +158,18 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-2. Install dependencies
+3. Install dependencies
 ``` bash
 pip install -r requirements.txt
 pip install -e .
 ```
 
-3. Create `.env` file
+4. Create `.env` file
 ``` bash
 touch .env
 ```
 
-4. Add your API keys:
+5. Add your API keys:
 ``` properties
 ANTHROPIC_API_KEY="your-anthropic-key"
 OPENAI_API_KEY="your-openai-key"

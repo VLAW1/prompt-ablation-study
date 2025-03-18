@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prompt-ablation"
+version = "0.1.0"
+description = "Prompt ablation study toolkit"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+    "pandas",
+    # Add other dependencies here
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[tool.setuptools]
+packages = ["src"]
+package-dir = {"" = "."}
+
+[tool.ruff.format]
+quote-style = "single"

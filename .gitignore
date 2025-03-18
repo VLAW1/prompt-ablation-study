@@ -1,0 +1,44 @@
+# API keys and secrets
+.env
+.env.local
+secrets.yaml
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+.venv
+venv/
+env/
+ENV/
+*.egg-info/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Logs
+*.log
+logs/
+
+# OS specific files
+.DS_Store
+
+# data
+*.jsonl
+!data/**/*.jsonl
+
+# Cursor ignore file
+.cursorignore

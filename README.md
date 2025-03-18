@@ -26,46 +26,46 @@ While the overall model explains a small portion of variance (R²=0.008), all co
 
 ### OLS Regression Results
 
-> ```
-> ==============================================================================
-> Dep. Variable:                correct   R-squared:                       0.008
-> Model:                            OLS   Adj. R-squared:                  0.008
-> Method:                 Least Squares   F-statistic:                     21.88
-> Date:                Mon, 17 Mar 2025   Prob (F-statistic):           1.36e-60
-> Time:                        15:15:43   Log-Likelihood:                -28748.
-> No. Observations:               40000   AIC:                         5.753e+04
-> Df Residuals:                   39984   BIC:                         5.766e+04
-> Df Model:                          15                                         
-> Covariance Type:            nonrobust                                         
-> =======================================================================================================================================
->                                                                           coef    std err          t      P>|t|      [0.025      0.975]
-> ---------------------------------------------------------------------------------------------------------------------------------------
-> Intercept                                                               0.5600      0.010     56.388      0.000       0.541       0.579
-> Role_Assignment                                                        -0.0400      0.014     -2.848      0.004      -0.068      -0.012
-> Chain_of_Thought                                                       -0.0400      0.014     -2.848      0.004      -0.068      -0.012
-> Role_Assignment:Chain_of_Thought                                        0.1600      0.020      8.055      0.000       0.121       0.199
-> Self_Verification                                                       0.0400      0.014      2.848      0.004       0.012       0.068
-> Role_Assignment:Self_Verification                                       0.0400      0.020      2.014      0.044       0.001       0.079
-> Chain_of_Thought:Self_Verification                                     -0.0600      0.020     -3.021      0.003      -0.099      -0.021
-> Role_Assignment:Chain_of_Thought:Self_Verification                     -0.1200      0.028     -4.272      0.000      -0.175      -0.065
-> Example_Solution                                                       -0.0400      0.014     -2.848      0.004      -0.068      -0.012
-> Role_Assignment:Example_Solution                                        0.0200      0.020      1.007      0.314      -0.019       0.059
-> Chain_of_Thought:Example_Solution                                       0.0200      0.020      1.007      0.314      -0.019       0.059
-> Role_Assignment:Chain_of_Thought:Example_Solution                      -0.1200      0.028     -4.272      0.000      -0.175      -0.065
-> Self_Verification:Example_Solution                                     -0.0400      0.020     -2.014      0.044      -0.079      -0.001
-> Role_Assignment:Self_Verification:Example_Solution                  -3.073e-16      0.028  -1.09e-14      1.000      -0.055       0.055
-> Chain_of_Thought:Self_Verification:Example_Solution                     0.0200      0.028      0.712      0.476      -0.035       0.075
-> Role_Assignment:Chain_of_Thought:Self_Verification:Example_Solution     0.1800      0.040      4.531      0.000       0.102       0.258
-> ==============================================================================
-> Omnibus:                   141244.864   Durbin-Watson:                   0.035
-> Prob(Omnibus):                  0.000   Jarque-Bera (JB):             6455.025
-> Skew:                          -0.153   Prob(JB):                         0.00
-> Kurtosis:                       1.056   Cond. No.                         47.0
-> ==============================================================================
-> 
-> Notes:
-> [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
-> ```
+```
+==============================================================================
+Dep. Variable:                correct   R-squared:                       0.008
+Model:                            OLS   Adj. R-squared:                  0.008
+Method:                 Least Squares   F-statistic:                     21.88
+Date:                Mon, 17 Mar 2025   Prob (F-statistic):           1.36e-60
+Time:                        15:15:43   Log-Likelihood:                -28748.
+No. Observations:               40000   AIC:                         5.753e+04
+Df Residuals:                   39984   BIC:                         5.766e+04
+Df Model:                          15                                         
+Covariance Type:            nonrobust                                         
+=======================================================================================================================================
+                                                                          coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------------------------------------------------------------
+Intercept                                                               0.5600      0.010     56.388      0.000       0.541       0.579
+Role_Assignment                                                        -0.0400      0.014     -2.848      0.004      -0.068      -0.012
+Chain_of_Thought                                                       -0.0400      0.014     -2.848      0.004      -0.068      -0.012
+Role_Assignment:Chain_of_Thought                                        0.1600      0.020      8.055      0.000       0.121       0.199
+Self_Verification                                                       0.0400      0.014      2.848      0.004       0.012       0.068
+Role_Assignment:Self_Verification                                       0.0400      0.020      2.014      0.044       0.001       0.079
+Chain_of_Thought:Self_Verification                                     -0.0600      0.020     -3.021      0.003      -0.099      -0.021
+Role_Assignment:Chain_of_Thought:Self_Verification                     -0.1200      0.028     -4.272      0.000      -0.175      -0.065
+Example_Solution                                                       -0.0400      0.014     -2.848      0.004      -0.068      -0.012
+Role_Assignment:Example_Solution                                        0.0200      0.020      1.007      0.314      -0.019       0.059
+Chain_of_Thought:Example_Solution                                       0.0200      0.020      1.007      0.314      -0.019       0.059
+Role_Assignment:Chain_of_Thought:Example_Solution                      -0.1200      0.028     -4.272      0.000      -0.175      -0.065
+Self_Verification:Example_Solution                                     -0.0400      0.020     -2.014      0.044      -0.079      -0.001
+Role_Assignment:Self_Verification:Example_Solution                  -3.073e-16      0.028  -1.09e-14      1.000      -0.055       0.055
+Chain_of_Thought:Self_Verification:Example_Solution                     0.0200      0.028      0.712      0.476      -0.035       0.075
+Role_Assignment:Chain_of_Thought:Self_Verification:Example_Solution     0.1800      0.040      4.531      0.000       0.102       0.258
+==============================================================================
+Omnibus:                   141244.864   Durbin-Watson:                   0.035
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):             6455.025
+Skew:                          -0.153   Prob(JB):                         0.00
+Kurtosis:                       1.056   Cond. No.                         47.0
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+```
 
 ### OLS Interpretation
 
@@ -84,27 +84,27 @@ Looking at these regression results:
 
 ### ANOVA Results
 
-> ```
->                                                     |        sum_sq  |       df  |             F  |        PR(>F)
-> =================================================================================================================
-> Intercept                                           |  7.840000e+02  |      1.0  |  3.179578e+03  |  0.000000e+00   
-> Role_Assignment                                     |  2.000000e+00  |      1.0  |  8.111167e+00  |  4.401582e-03   
-> Chain_of_Thought                                    |  2.000000e+00  |      1.0  |  8.111167e+00  |  4.401582e-03   
-> Role_Assignment:Chain_of_Thought                    |  1.600000e+01  |      1.0  |  6.488934e+01  |  8.140116e-16   
-> Self_Verification                                   |  2.000000e+00  |      1.0  |  8.111167e+00  |  4.401582e-03   
-> Role_Assignment:Self_Verification                   |  1.000000e+00  |      1.0  |  4.055584e+00  |  4.403218e-02   
-> Chain_of_Thought:Self_Verification                  |  2.250000e+00  |      1.0  |  9.125063e+00  |  2.522904e-03   
-> Role_Assignment:Chain_of_Thought:Self_Verification  |  4.500000e+00  |      1.0  |  1.825013e+01  |  1.941602e-05   
-> Example_Solution                                    |  2.000000e+00  |      1.0  |  8.111167e+00  |  4.401582e-03   
-> Role_Assignment:Example_Solution                    |  2.500000e-01  |      1.0  |  1.013896e+00  |  3.139774e-01   
-> Chain_of_Thought:Example_Solution                   |  2.500000e-01  |      1.0  |  1.013896e+00  |  3.139774e-01   
-> Role_Assignment:Chain_of_Thought:Example_Solution   |  4.500000e+00  |      1.0  |  1.825013e+01  |  1.941602e-05   
-> Self_Verification:Example_Solution                  |  1.000000e+00  |      1.0  |  4.055584e+00  |  4.403218e-02   
-> Role_Assignment:Self_Verification:Example_Solution  |  2.951306e-29  |      1.0  |  1.196927e-28  |  1.000000e+00   
-> Chain_of_Thought:Self_Verification:Example_Solu...  |  1.250000e-01  |      1.0  |  5.069480e-01  |  4.764672e-01   
-> Role_Assignment:Chain_of_Thought:Self_Verificat...  |  5.062500e+00  |      1.0  |  2.053139e+01  |  5.883085e-06   
-> Residual                                            |  9.859000e+03  |  39984.0  |           NaN  |           NaN
-> ```
+```
+                                                    |        sum_sq  |       df  |             F  |        PR(>F)
+=================================================================================================================
+Intercept                                           |  7.840000e+02  |      1.0  |  3.179578e+03  |  0.000000e+00   
+Role_Assignment                                     |  2.000000e+00  |      1.0  |  8.111167e+00  |  4.401582e-03   
+Chain_of_Thought                                    |  2.000000e+00  |      1.0  |  8.111167e+00  |  4.401582e-03   
+Role_Assignment:Chain_of_Thought                    |  1.600000e+01  |      1.0  |  6.488934e+01  |  8.140116e-16   
+Self_Verification                                   |  2.000000e+00  |      1.0  |  8.111167e+00  |  4.401582e-03   
+Role_Assignment:Self_Verification                   |  1.000000e+00  |      1.0  |  4.055584e+00  |  4.403218e-02   
+Chain_of_Thought:Self_Verification                  |  2.250000e+00  |      1.0  |  9.125063e+00  |  2.522904e-03   
+Role_Assignment:Chain_of_Thought:Self_Verification  |  4.500000e+00  |      1.0  |  1.825013e+01  |  1.941602e-05   
+Example_Solution                                    |  2.000000e+00  |      1.0  |  8.111167e+00  |  4.401582e-03   
+Role_Assignment:Example_Solution                    |  2.500000e-01  |      1.0  |  1.013896e+00  |  3.139774e-01   
+Chain_of_Thought:Example_Solution                   |  2.500000e-01  |      1.0  |  1.013896e+00  |  3.139774e-01   
+Role_Assignment:Chain_of_Thought:Example_Solution   |  4.500000e+00  |      1.0  |  1.825013e+01  |  1.941602e-05   
+Self_Verification:Example_Solution                  |  1.000000e+00  |      1.0  |  4.055584e+00  |  4.403218e-02   
+Role_Assignment:Self_Verification:Example_Solution  |  2.951306e-29  |      1.0  |  1.196927e-28  |  1.000000e+00   
+Chain_of_Thought:Self_Verification:Example_Solu...  |  1.250000e-01  |      1.0  |  5.069480e-01  |  4.764672e-01   
+Role_Assignment:Chain_of_Thought:Self_Verificat...  |  5.062500e+00  |      1.0  |  2.053139e+01  |  5.883085e-06   
+Residual                                            |  9.859000e+03  |  39984.0  |           NaN  |           NaN
+```
 
 ### Type-III ANOVA Interpretation
 
@@ -120,22 +120,26 @@ The strong interactions confirm that certain prompt components work synergistica
 
 ## Project Structure
 
->```
-> src/                     # Main source code
-> ├── apis/                # API clients for different LLM providers 
-> ├── prompts/             # Tools for prompt component manipulation
-> ├── models/              # Data models and configuration classes
-> ├── domains/             # Domain-specific implementations
-> |    └── math_reasoning/ # Math problem solving domain implementation
-> ├── /analysis            # Analysis tools and visualization
-> ├── /experiments         # Experiment tracking and execution
-> |
-> ├── /data                # Raw data for different domains
-> ├── /results             # Experiment results
-> └── /notebooks           # Jupyter notebooks for analysis and visualization
->```
+```
+src/                     # Main source code
+├── apis/                # API clients for different LLM providers 
+├── prompts/             # Tools for prompt component manipulation
+├── models/              # Data models and configuration classes
+├── domains/             # Domain-specific implementations
+|    └── math_reasoning/ # Math problem solving domain implementation
+├── /analysis            # Analysis tools and visualization
+├── /experiments         # Experiment tracking and execution
+|
+├── /data                # Raw data for different domains
+├── /results             # Experiment results
+└── /notebooks           # Jupyter notebooks for analysis and visualization
+```
 
-## Getting Started
+## Setup
+
+Requirements:
+- Python 3.13
+- Your own API keys
 
 ### Installation
 

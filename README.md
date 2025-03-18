@@ -13,7 +13,7 @@ This project provides a structured framework for:
 ## Project Structure
 
 >```
->src/                      # Main source code
+> src/                     # Main source code
 > ├── apis/                # API clients for different LLM providers 
 > ├── prompts/             # Tools for prompt component manipulation
 > ├── models/              # Data models and configuration classes

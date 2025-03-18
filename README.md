@@ -7,66 +7,8 @@ A toolkit for conducting prompt ablation studies to analyze the impact of prompt
 This project provides a structured framework for:
 - Defining modular prompt components for different domains (e.g., math reasoning)
 - Systematically generating all combinations of prompt components
-- Running experiments with various LLMs to measure impact
+- Running experiments to measure LLM performance as a function of the prompt components
 - Analyzing results to determine component effectiveness
-
-## Project Structure
-
->```
-> src/                     # Main source code
-> ├── apis/                # API clients for different LLM providers 
-> ├── prompts/             # Tools for prompt component manipulation
-> ├── models/              # Data models and configuration classes
-> ├── domains/             # Domain-specific implementations
-> |    └── math_reasoning/ # Math problem solving domain implementation
-> ├── /analysis            # Analysis tools and visualization
-> ├── /experiments         # Experiment tracking and execution
-> |
-> ├── /data                # Raw data for different domains
-> ├── /results             # Experiment results
-> └── /notebooks           # Jupyter notebooks for analysis and visualization
->```
-
-## Getting Started
-
-### Installation
-
-1. Clone the repository
-``` bash
-git clone https://github.com/yourusername/prompt-component-study.git
-cd prompt-component-study
-```
-
-2. Create a virtual environment
-
-``` bash
-python -m venv .venv
-source .venv/bin/activate
-```
-
-2. Install dependencies
-``` bash
-pip install -r requirements.txt
-pip install -e .
-```
-
-3. Create `.env` file
-``` bash
-touch .env
-```
-
-4. Add your API keys:
-``` properties
-ANTHROPIC_API_KEY="your_anthropic_api_key"
-# Add other API keys as needed
-```
-
-### Running Experiments
-
-Example code to run a math reasoning experiment on a sample of the MATH 500 benchmark can be found in `src/domains/math_reasoning/run_experiment.py`.
-You can run that file as a script to replicate the results present here.
-
-(Currently, the experiment is configured to call Claude 3.5 Haiku with batch processing. Each run with 4-5 prompt components and 50 math problems costs $2-3.)
 
 ## Initial Results: Math reasoning with Claude 3.5 Haiku
 
@@ -175,6 +117,65 @@ Looking at these regression results:
     - Role_Assignment, Chain_of_Thought, and Example_Solution (F=18.25, p<0.001)
 
 The strong interactions confirm that certain prompt components work synergistically while some combinations may be counterproductive
+
+## Project Structure
+
+>```
+> src/                     # Main source code
+> ├── apis/                # API clients for different LLM providers 
+> ├── prompts/             # Tools for prompt component manipulation
+> ├── models/              # Data models and configuration classes
+> ├── domains/             # Domain-specific implementations
+> |    └── math_reasoning/ # Math problem solving domain implementation
+> ├── /analysis            # Analysis tools and visualization
+> ├── /experiments         # Experiment tracking and execution
+> |
+> ├── /data                # Raw data for different domains
+> ├── /results             # Experiment results
+> └── /notebooks           # Jupyter notebooks for analysis and visualization
+>```
+
+## Getting Started
+
+### Installation
+
+1. Clone the repository
+``` bash
+git clone https://github.com/yourusername/prompt-component-study.git
+cd prompt-component-study
+```
+
+2. Create a virtual environment
+
+``` bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+2. Install dependencies
+``` bash
+pip install -r requirements.txt
+pip install -e .
+```
+
+3. Create `.env` file
+``` bash
+touch .env
+```
+
+4. Add your API keys:
+``` properties
+ANTHROPIC_API_KEY="your-anthropic-key"
+OPENAI_API_KEY="your-openai-key"
+GEMINI_API_KEY="your-google-key"
+```
+
+### Running Experiments
+
+Example code to run a math reasoning experiment on a sample of the MATH 500 benchmark can be found in `src/domains/math_reasoning/run_experiment.py`.
+You can run that file as a script to replicate the results present here.
+
+(Currently, the experiment is configured to call Claude 3.5 Haiku with batch processing. Each run with 4-5 prompt components and 50 math problems costs $2-3.)
 
 ## Adding New Domains
 

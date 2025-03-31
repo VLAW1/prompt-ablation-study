@@ -147,8 +147,8 @@ You will of course need your own API keys.
 
 1. Clone the repository
 ``` bash
-git clone https://github.com/yourusername/prompt-component-study.git
-cd prompt-component-study
+git clone https://github.com/VLAW1/prompt-ablation-study.git
+cd prompt-ablation-study
 ```
 
 2. Create a virtual environment
